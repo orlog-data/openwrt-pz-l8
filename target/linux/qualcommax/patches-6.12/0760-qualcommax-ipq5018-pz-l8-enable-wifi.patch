@@ -1,0 +1,27 @@
+From: OpenWrt Builder <builder@example.com>
+Subject: [PATCH] qualcommax: ipq5018: pz-l8: enable WiFi nodes
+
+Enable WiFi nodes for PZ-L8 device. The device uses calibration variant
+"CMCC-PZ-L8" which is already defined in the device tree.
+
+diff --git a/target/linux/qualcommax/dts/ipq5018-pz-l8.dts b/target/linux/qualcommax/dts/ipq5018-pz-l8.dts
+--- a/target/linux/qualcommax/dts/ipq5018-pz-l8.dts
++++ b/target/linux/qualcommax/dts/ipq5018-pz-l8.dts
+@@ -100,7 +100,7 @@
+ 	qcom,bdf-addr = <0x4c400000>;
+ 
+ 	ieee80211-freq-limit = <2400000 2483000>;
+ 
+-	status = "disabled";
++	status = "okay";
+ };
+ 
+ &wifi1 {
+@@ -112,7 +112,7 @@
+ 	qcom,m3-dump-addr = <0x4df00000>;
+ 
+ 	ieee80211-freq-limit = <5150000 7250000>;
+ 
+-	status = "disabled";
++	status = "okay";
+ };

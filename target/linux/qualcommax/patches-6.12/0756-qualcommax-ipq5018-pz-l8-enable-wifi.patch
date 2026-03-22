@@ -1,0 +1,24 @@
+From: OpenWrt Builder <builder@example.com>
+Subject: [PATCH] qualcommax: ipq5018: pz-l8: enable WiFi
+
+Enable WiFi nodes for PZ-L8 device.
+
+diff --git a/target/linux/qualcommax/dts/ipq5018-pz-l8.dts b/target/linux/qualcommax/dts/ipq5018-pz-l8.dts
+--- a/target/linux/qualcommax/dts/ipq5018-pz-l8.dts
++++ b/target/linux/qualcommax/dts/ipq5018-pz-l8.dts
+@@ -104,7 +104,7 @@ &wifi {
+ 	qcom,bdf-addr = <0x4c400000>;
+ 
+ 	ieee80211-freq-limit = <2400000 2483000>;
+-	status = "disabled";
++	status = "okay";
+ };
+ 
+ &wifi1 {
+@@ -115,5 +115,5 @@ &wifi1 {
+ 	qcom,m3-dump-addr = <0x4df00000>;
+ 
+ 	ieee80211-freq-limit = <5150000 7250000>;
+-	status = "disabled";
++	status = "okay";
+ };
